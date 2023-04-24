@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./Assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/style.css"/>
     <title>QuizWise</title>
 </head>
 <body>
     <header>
         <div id="HighScores">
-            <div id="timer"></div>
+            <a href="./scores.html">The HighScores</a>
         </div>
+            <div id="timer"></div>
     </header> 
 
         <main>
-            <div id="welcome">
+            <div id="title">
        <h1>Welcome to QuizWise</h1>
        <button id ="startquiz" class="button">Start Quiz</button>
-            
-    
-    
     </div>
+    
+    <div id="quiz" class="hidden">
+        <div id="questions"></div>
 
+        <div id="options"></div>
 
-
-
-
-
-
-
-
-
-
+        <div id="message"></div>
+    </div>
+    <div id="result" class="hidden">
+        <div id="info"></div>
+        <button id="viewscores" class="button">View the HighScores</button>
+        <input type="text" id="name" placeholder="Enter your Name"/>
+        <button id="savescore" class="button">Save Score</button>
+        <button id="PlayAgain" class="button">Play Again</button>
+    </div>
         </main>
          
         
@@ -39,6 +43,5 @@
 
 
 
-  
 </body>
 </html>

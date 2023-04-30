@@ -13,16 +13,30 @@
 }
 
 
+
 h1{
+    margin-top: 10%;
+    margin-left: 17%;
     font-size: 5.3rem;
     color:white;
     margin-bottom: 5rem;
+}
+
+button{
+    border-radius: 6px;
+   
+}
+
+input{
+    border-radius: 6px;
+    
 }
 
 h2{
     font-size: 4.2rem;
     margin-bottom: 4rem;
 }
+
 
 .results{
     width: 100vw;

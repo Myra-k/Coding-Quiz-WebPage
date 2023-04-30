@@ -54,7 +54,8 @@ function onpressAnswer(event) {
 
     }else {
         score--;
-        displayMessage('incorrect:-(')
+        displayMessage('incorrect:-(');
+        secondsleft-=5;
     }
     displayQuestion();
 }
@@ -71,6 +72,7 @@ function displayQuestion() {
     if (currentquestion >= questions.length){
       stopGame();
        return;
+
    }
 
 
@@ -99,7 +101,7 @@ function onstartGame() {
         }else {
             stopGame();
         }
-        secondsleft-=5;
+        secondsleft--;
     },1000);
 
     title.style.display= 'none';

@@ -26,7 +26,7 @@ function stopGame() {
     timer.textContent = ""
     quiz.style.display= 'none';
     result.style.display='flex'
-    info.textContent = "your score is " + score;
+    info.textContent = "YOUR SCORE IS: " + score;
 }
 
 function onsavescore() {
@@ -34,7 +34,7 @@ function onsavescore() {
     if (name !=="") {
         localStorage.setItem(name, score);
         document.getElementById("name").value = "";
-
+       
     }
 }
 
@@ -54,7 +54,7 @@ function onpressAnswer(event) {
 
     }else {
         score--;
-        displayMessage('incorrect:-(');
+        displayMessage('incorrect!');
         secondsleft-=5;
     }
     displayQuestion();

@@ -30,11 +30,21 @@ function stopGame() {
 }
 
 function onsavescore() {
-    let name = document.getElementById("name").value
+    console.log("33")
+    let name = document.getElementById("name").value.trim();
+    console.log(name)
     if (name !=="") {
-        localStorage.setItem(name, score);
-        document.getElementById("name").value = "";
-       
+        var highscore= JSON.parse(localStorage.getItem("name"))||[];
+        console.log(highscore)
+        var newscore={
+            name:name,
+            score:score,
+        }
+        console.log(newscore)
+        highscore.push(newscore)
+        localStorage.setItem("name", JSON.stringify(highscore));
+        //document.getElementById("name").value = "";
+        //window.location.href = 'scores.html';
     }
 }
 
@@ -112,6 +122,6 @@ function onstartGame() {
 }
 
 startquiz.addEventListener("click", onstartGame);
-savescore.addEventListener("click", onsavescore);
+savescore.addEventListener("submit", onsavescore);
 playagain.addEventListener("click", onstartGame);
 viewscores.addEventListener("click", onviewscores);

@@ -1,3 +1,6 @@
+
+// variables 
+
 var startquiz = document.getElementById("startquiz")
 var savescore = document.getElementById("savescore")
 var viewscores = document.getElementById("viewscores")
@@ -21,6 +24,8 @@ var score = 0;
 var currentquestion = 0;
 var countdown;
 
+//when game has stopped and score is presented
+
 function stopGame() {
     clearInterval(countdown);
     timer.textContent = ""
@@ -28,6 +33,8 @@ function stopGame() {
     result.style.display='flex'
     info.textContent = "YOUR SCORE IS: " + score;
 }
+
+//below is when user saves score 
 
 function onsavescore() {
     console.log("33")
@@ -48,10 +55,14 @@ function onsavescore() {
     }
 }
 
+//below is to view the scores
+
 function onviewscores() {
     window.location.href = 'scores.html';
 
 }
+
+//when user clicks on the answer/options
 
 function onpressAnswer(event) {
     const correctanswer = questions[currentquestion].answer;
@@ -70,12 +81,16 @@ function onpressAnswer(event) {
     displayQuestion();
 }
 
+//the message that states correct or wrong
+
 function displayMessage(m) {
     message.textContent= m;
     setTimeout(function() {
         message.textContent="";
     }, 1000);
 }
+
+//quiz questions below
 
 function displayQuestion() {
     currentquestion++;
@@ -101,6 +116,8 @@ for (var i = 0; i < question.choices.length; i++) {
    }  
 }
 
+//function when the game starts and timer begins
+
 function onstartGame() {
     secondsleft = 75;
     currentquestion = -1;
@@ -121,7 +138,9 @@ function onstartGame() {
    displayQuestion();
 }
 
+//event listenters for all the buttons etc
+
 startquiz.addEventListener("click", onstartGame);
-savescore.addEventListener("submit", onsavescore);
+savescore.addEventListener("click", onsavescore);
 playagain.addEventListener("click", onstartGame);
 viewscores.addEventListener("click", onviewscores);

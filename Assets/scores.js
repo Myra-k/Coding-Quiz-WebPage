@@ -1,3 +1,6 @@
+
+//here are the scores for the quiz and how they are presented etc
+
 var scoreboard = document.getElementById("scoreboard")
 var goBack = document.getElementById("GoBack")
 
@@ -10,7 +13,7 @@ function displayscore() {
     var highscore= JSON.parse(localStorage.getItem("name"))||[];
     for (var i = 0; i<highscore.length; i++) {
         var litag=document.createElement("li")
-        litag.textContent=highscore[i].name + '-' + highscore[i].score
+        litag.textContent=highscore[i].name + ' - ' + highscore[i].score
         console.log(highscore[i])
         var resultel=document.getElementById("final")
         resultel.appendChild(litag)

@@ -1,3 +1,5 @@
+//here are the questions for the quiz
+
 var questions = [
     {
       title: 'Commonly used data types DO NOT include:',

@@ -9,7 +9,7 @@ This website is a fun short test of knowledge, in other words its a quiz.This qu
 ## Deployed page
 
 
-![Deployed page screenshot]
+![Deployed page screenshot](./Assets/Screenshot%202023-05-02%20at%2022.04.34.png)
 
 # Installation
 
@@ -28,7 +28,7 @@ To use this webpage, you can press the start quiz button which starts the quiz, 
 
 * URL Of Deployed Application 
 
-* URL Of Github Repository 
+* URL Of Github Repository (https://github.com/Myra-k/Coding-Quiz-WebPage.git)
 
 ## Licence
 
